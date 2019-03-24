@@ -461,7 +461,7 @@ data Expr s a
     | Field (Expr s a) Text
     -- | > Project e xs                             ~  e.{ xs }
     | Project (Expr s a) (Set Text)
-    -- | > Note s x                                 ~  e
+    -- | > Note s e                                 ~  e
     | Note s (Expr s a)
     -- | > ImportAlt                                ~  e1 ? e2
     | ImportAlt (Expr s a) (Expr s a)
