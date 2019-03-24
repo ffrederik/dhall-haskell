@@ -20,8 +20,8 @@ import qualified Dhall.Core
 
     Currently this:
 
-    * removes unused @let@ bindings with 'removeLetInLet'.
-    * consolidates nested @let@ bindings to use a multiple-@let@ binding with 'removeUnusedBindings'.
+    * removes unused @let@ bindings with 'removeUnusedBindings'.
+    * consolidates nested @let@ bindings to use a multiple-@let@ binding with 'removeLetInLet'.
     * switches legacy @List@-like @Optional@ literals to use @Some@ / @None@ instead with 'optionalLitToSomeNone'
 -}
 lint :: Expr s Import -> Expr t Import
