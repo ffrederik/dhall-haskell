@@ -81,7 +81,7 @@ typeAt src ctx exp = case exp of
                 | src `posIn` u -> typeAt src ctx u
                 | src `posIn` u' -> typeAt src ctx u'
                 | otherwise -> typeWith ctx exp
-  
+  -- catches any other constructor that does not contain subexpressions
   _ -> typeWith ctx exp
  where binaryConstructor :: Expr' -> Expr' -> Either (TypeError Src X) Expr'
        binaryConstructor t u | src `posIn` t = typeAt src ctx t
